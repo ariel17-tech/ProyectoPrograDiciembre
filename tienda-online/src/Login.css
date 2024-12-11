@@ -1,0 +1,27 @@
+.form-control::placeholder {
+    color: #aaa; /* Color del placeholder */
+}
+
+.btn-danger {
+    background-color: #dc3545; /* Color de fondo rojo para el botón de Iniciar Sesión */
+    border: none; /* Sin borde */
+}
+
+.btn-danger:hover {
+    background-color: #c82333; /* Color más oscuro al pasar el mouse */
+}
+
+.btn-light {
+    background-color: white; /* Fondo blanco para el botón de registrarse */
+    color: gray; /* Letras grises */
+}
+
+.btn-light:hover {
+    background-color: #f0f0f0; /* Color de fondo al pasar el mouse */
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  } 

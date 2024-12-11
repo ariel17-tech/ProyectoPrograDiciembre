@@ -1,0 +1,56 @@
+/* Estilo general para el contenedor */
+.container {
+    margin-top: 20px;
+  }
+  
+  /* Estilo para el carrusel */
+  .carousel-inner img {
+    width: 100%;
+    height: 400px; /* Ajusta la altura del carrusel */
+  }
+  
+  /* Estilo para las tarjetas de productos */
+  .card {
+    border: 1px solid #dc3545; /* Borde rojo */
+    border-radius: 10px; /* Bordes redondeados */
+    transition: transform 0.2s; /* Efecto de hover */
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* Aumenta el tamaño al pasar el mouse */
+  }
+  
+  /* Estilo para el botón del carrito */
+  .btn-danger {
+    background-color: #dc3545; /* Color de fondo del botón */
+    border: none; /* Sin borde */
+  }
+  
+  .btn-danger:hover {
+    background-color: #c72c41; /* Color de fondo al pasar el mouse */
+  }
+  
+  /* Estilo para el título de secciones */
+  h2 {
+    margin-bottom: 20px; /* Espacio debajo del título */
+    font-weight: bold; /* Negrita */
+  }
+  .carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .carousel-item img {
+    width: 50%; /* Ajusta el tamaño de la imagen principal */
+    margin: 0 10%; /* Espacio para las imágenes laterales */
+  }
+
+  .carousel-item.active img {
+    opacity: 1; /* Imagen activa completamente visible */
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 5%; /* Ajusta el ancho de las flechas */
+  }

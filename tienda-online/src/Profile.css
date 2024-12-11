@@ -1,0 +1,28 @@
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente el contenedor principal */
+  justify-content: center; /* Centra verticalmente */
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  background-color: #f8f9fa; /* Color de fondo opcional */
+}
+
+.profile-box {
+  background-color: white; /* Fondo blanco para el contenido */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+  padding: 20px; /* Espaciado interno */
+  width: 300px; /* Ancho fijo o ajustable */
+  text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.text-gray {
+  color: gray; /* Color gris para el texto */
+  margin: 0; /* Elimina el margen para que esté más centrado */
+  text-align: center; /* Centra el texto de los valores */
+}
+
+.font-weight-bold {
+  font-weight: bold; /* Negrita */
+  margin: 0; /* Elimina el margen para que esté más centrado */
+}
