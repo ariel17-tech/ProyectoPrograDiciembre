@@ -1,0 +1,31 @@
+-- Crear la base de datos
+CREATE DATABASE IF NOT EXISTS tienda_online;
+-- Usar la base de datos
+USE tienda_online;
+-- Crear la tabla de usuarios
+CREATE TABLE IF NOT EXISTS usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(100) NOT NULL UNIQUE, -- Nombre de usuario
+    password VARCHAR(255) NOT NULL, -- Contraseña (almacenada de forma segura)
+    fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    estado ENUM('activo', 'inactivo') DEFAULT 'activo' -- Estado del usuario
+);
+-- Crear la tabla de productos
+CREATE TABLE IF NOT EXISTS productos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL, -- Nombre del producto
+    price DECIMAL(10, 2) NOT NULL, -- Precio del producto
+    seller VARCHAR(100) NOT NULL, -- Vendedor del producto
+    descripcion TEXT, -- Descripción del producto (opcional)
+    cantidad INT NOT NULL DEFAULT 0, -- Cantidad disponible en stock
+    fecha_agregado TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    estado ENUM('disponible', 'agotado') DEFAULT 'disponible' -- Estado del producto
+);
+-- Crear la tabla de pedidos (opcional, para gestionar compras)
+CREATE TABLE IF NOT EXISTS pedidos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_usuario INT,
+    fecha_pedido TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    total DECIMAL(10, 2) NOT NULL,
+    FOREIGN KEY (id_usuario) REFERENCES usuarios(id)
+);
